@@ -31,12 +31,12 @@ To set up this project, install the necessary dependencies and prepare the datas
 Clone the project repository to your local machine:
 
 ```bash
-git clone https://github.com/your-username/UNet_vgg16.git
+git clone https://github.com/BONBIDHIE/UNet_vgg16.git
 ```
 
 ### 2. Navigate to the project directory
 ```bash
-cd HIE-segmentation
+cd UNet_vgg16
 ```
 
 ### 3. Install the required dependencies
@@ -104,6 +104,5 @@ We welcome contributions to enhance this project. To contribute:
 ## License
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
-README.md
-Displaying README.md.
+
 
