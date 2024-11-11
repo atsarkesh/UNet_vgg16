@@ -50,36 +50,19 @@ This will install TensorFlow, SimpleITK, OpenCV, and other libraries needed for 
 
 ## Usage
 
-### Preprocessing
+1. **Preprocessing**:
+   - The `Preprocessing` folder contains scripts to preprocess MRI images, including resizing, cropping, and normalization.
 
-1. **Data Preprocessing**: Preprocess the ADC, Z_ADC, and Fusion images for uniform input. Use the script in the `Preprocessing` folder to crop, resize, normalize and fuse images.
+2. **Training and Testing**:
+   - The model training and testing scripts are contained in the `Train_Test` folder. Run the following command to train the model on the processed data, for instance:
+   
+     ```bash
+     python Train_Test/classified_ADC_unet_vgg16_fold1.py
+     ```
 
-    ```bash
-    python Preprocessing/preprocess_data.py --input_path /path/to/raw_data --output_path /path/to/processed_data
-    ```
+3. **Evaluation and Prediction**:
+   - Model evaluation and prediction are also performed in the same script `classified_ADC_unet_vgg16_fold1.py`. This script will output segmentation masks for given input MRI images and save evaluation metrics.
 
-### Training, Testing, Evaluation and Prediction
-
-1. **Training, Testing, Evaluation and Prediction**: All the training, testing, evaluation and prediction tasks are performed within a single script. For example, the `classified_ADC_unet_vgg16_fold1.py` script handles training, testing, and evaluation of the model on the dataset (ADC, Z_ADC, or Fusion). To run the script:
-
-    ```bash
-    python Train_Test/classified_ADC_unet_vgg16_fold1.py --data_path /path/to/processed_data --output_dir /path/to/save_model --mode train
-    ```
-
-    - To **train** the model, use the `--mode train` flag.
-    - To **evaluate** the model, use the `--mode evaluate` flag (this will use the trained model to evaluate the dataset).
-    - To **test** the model, use the `--mode test` flag (this will test the model on a separate dataset).
-    - To **predict** the model, use the `--mode predict` flap (this will generate predictions on validation and test dataset).
-
-    Example command to run the full process (training, testing, evaluation and prediction):
-
-    ```bash
-    python Train_Test/classified_ADC_unet_vgg16_fold1.py --data_path /path/to/processed_data --output_dir /path/to/save_model --mode train
-    python Train_Test/classified_ADC_unet_vgg16_fold1.py --data_path /path/to/test_data --output_dir /path/to/save_model --mode test
-    python Train_Test/classified_ADC_unet_vgg16_fold1.py --data_path /path/to/validation_data --output_dir /path/to/save_model --mode evaluate
-        python Train_Test/classified_ADC_unet_vgg16_fold1.py --data_path /path/to/validation_data --output_dir /path/to/save_model --mode predict
-            python Train_Test/classified_ADC_unet_vgg16_fold1.py --data_path /path/to/test_data --output_dir /path/to/save_model --mode predict
-    ```
 
 ## Contributing
 
