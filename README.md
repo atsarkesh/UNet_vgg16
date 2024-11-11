@@ -1,6 +1,7 @@
 # Neonatal Hypoxic-Ischemic Encephalopathy (HIE) Lesion Segmentation in MRI Using Deep Learning
 
-This project focuses on the segmentation of neonatal hypoxic-ischemic encephalopathy (HIE) lesions using MRI scans. Using deep learning methods, particularly the U-Net model with a VGG16 backbone, this project aims to improve diagnostic accuracy by segmenting small, diffuse lesions in neonates affected by HIE.
+This project focuses on the segmentation of neonatal hypoxic-ischemic encephalopathy (HIE) lesions using MRI scans. Using deep learning methods, particularly the U-Net model with a VGG16 backbone, this project aims to improve diagnostic accuracy by segmenting small, diffuse lesions in neonates affected by HIE.  Dataset The BONBID-HIE dataset is used for the HIE lesion segmentation challenge at the Medical Image Computing and Computer Assisted Intervention (MICCAI) 2023 annual conference in October 2023. Information about the HIE challenges, including data storage and download, can be found on the [HIE Challenge homepage](https://hiechallenge.github.io/).
+
 
 ## Table of Contents
 
